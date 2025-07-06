@@ -1,49 +1,44 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+# Decoupla Gatsby Starter
 
-## 🚀 Quick start
+This project is a starter Gatsby application built with TypeScript, demonstrating how to integrate with Decoupla CMS, using the [gatsby-source-decoupla](https://www.npmjs.com/package/gatsby-source-decoupla) plugin. It's designed to provide a quick setup for a blog, fetching content from a pre-configured Decoupla sandbox account.
 
-1.  **Create a Gatsby site.**
+## Prerequisites
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+Before you begin, ensure you have the following installed on your machine:
+* Node.js: Version 14 or higher (LTS recommended).
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+## Getting Started
 
-2.  **Start developing.**
+### Install Dependencies
 
-    Navigate into your new site’s directory and start it up.
+```bash
+npm install
+# OR
+yarn install
+```
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+### Run the Development Server
 
-3.  **Open the code and start customizing!**
+```bash
+npm run develop
+# OR
+yarn develop
+```
 
-    Your site is now running at http://localhost:8000!
+This command will:
+* Start a local development server.
+* Fetch data from the Decoupla workspace.
+* Build the Gatsby site.
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+You can then open your browser and navigate to [http://localhost:8000](http://localhost:8000) to view the running application. The GraphQL playground will be available at [http://localhost:8000/___graphql](http://localhost:8000/___graphql).
 
-4.  **Learn more**
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+## Connecting to Your Own Decoupla Project
 
-## 🚀 Quick start (Netlify)
+To connect this starter project to your own Decoupla workspace:
+* Generate API Credentials: In your Decoupla dashboard, navigate to your workspace's API settings and obtain your Workspace ID and the API Token.
+* Update .env: Modify the .env file in the root of this project with your new Decoupla credentials:
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+## License
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+This project is open-sourced under the MIT License. See the LICENSE file for more details.

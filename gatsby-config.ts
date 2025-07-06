@@ -1,4 +1,13 @@
 import type { GatsbyConfig } from "gatsby";
+import dotenv from "dotenv";
+
+// Load environment variables from .env file
+dotenv.config();
+
+const {
+  DECOUPLA_WORKSPACE_ID,
+  DECOUPLA_TOKEN
+} = process.env;
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -9,7 +18,17 @@ const config: GatsbyConfig = {
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
-  plugins: ["gatsby-plugin-postcss"]
+  plugins: [
+    "gatsby-plugin-typegen",
+    "gatsby-plugin-postcss",
+    {
+      resolve: `gatsby-source-decoupla`,
+      options: {
+        workspace: DECOUPLA_WORKSPACE_ID,
+        token: DECOUPLA_TOKEN
+      },
+    },
+  ]
 };
 
 export default config;
