@@ -176,6 +176,8 @@ type Decoupla_BlogPostEdge = {
 
 type Decoupla_BlogPostFilter = {
   readonly and: InputMaybe<ReadonlyArray<Decoupla_BlogPostFilter>>;
+  readonly authorAuthorFilter: InputMaybe<Decoupla_AuthorFilter>;
+  readonly categoryCategoryFilter: InputMaybe<Decoupla_CategoryFilter>;
   readonly datePublished: InputMaybe<Decoupla_DateFilter>;
   readonly id: InputMaybe<Decoupla_IdFilter>;
   readonly or: InputMaybe<ReadonlyArray<Decoupla_BlogPostFilter>>;
